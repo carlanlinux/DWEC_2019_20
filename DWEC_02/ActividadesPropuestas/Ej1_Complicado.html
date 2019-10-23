@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+    <script type="text/javascript">
+        function checkDato() {
+            var valor = document.getElementById("dato").value;
+            document.getElementById("resultado").value = typeof valor;
+        }
+    </script>
+</head>
+<body>
+<h1>Ventana principal</h1>
+<form id="formulario">
+    <p>
+        <label for="dato">Introducir dato: </label>
+        <input type="text" id="dato">
+    </p>
+    <p>
+        <input type="button" value="Comprobar" id="enviar" onclick="checkDato()">
+    </p>
+    <p>
+        <label for="resultado">El resultado del chequeo es:</label>
+        <input type="text" id="resultado">
+    </p>
+</form>
+</body>
+</html>
