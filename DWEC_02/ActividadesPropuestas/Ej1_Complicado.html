@@ -6,7 +6,11 @@
     <script type="text/javascript">
         function checkDato() {
             var valor = document.getElementById("dato").value;
+            var pepa = prompt("Meta algo");
             document.getElementById("resultado").value = typeof valor;
+            document.getElementById("valorfinal").value = valor.valueOf();
+            document.write("valorfinal" + valor.valueOf() + pepa);
+
         }
     </script>
 </head>
@@ -23,6 +27,7 @@
     <p>
         <label for="resultado">El resultado del chequeo es:</label>
         <input type="text" id="resultado">
+        <input type="text" id="valorfinal">
     </p>
 </form>
 </body>
