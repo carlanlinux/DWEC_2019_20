@@ -10,14 +10,14 @@
 
     do {
       var entrada = parseInt(prompt("Introducir un número"));
-            sumTramos += entrada;
+        sumTramos += entrada;
     } while (entrada != 0)
 
-    horas = sumTramos / 60;
-    if (sumTramos / 60 < 0) {
+    horas = Math.trunc(sumTramos / 60);
+    if (sumTramos < 60) {
         document.write("El viaje dura " + sumTramos + " minutos");
     } else {
-        document.write("El viaje dura " + horas + (sumTramos - (horas * 60));
+        document.write("El viaje dura " + horas + " y " + (sumTramos - (horas * 60)) + " minutos.");
     }
 
 </script>
