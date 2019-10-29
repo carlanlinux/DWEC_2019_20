@@ -7,8 +7,9 @@
 <body>
 <script type="text/javascript">
       var potencia = parseInt(prompt("Introducir número"));
-            document.write("Potencia: " + Math.pow(potencia,2) + "<br>");
-
+        for (let i = 0; i < potencia; i++) {
+            document.write("Potencia " + i + " de 2 es: " + Math.pow(2,i) + "<br>");
+        }
 </script>
 </body>
 </html>
