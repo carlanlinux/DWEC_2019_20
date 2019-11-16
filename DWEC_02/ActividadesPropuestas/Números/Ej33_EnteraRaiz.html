@@ -7,12 +7,9 @@
 <body>
 <script type="text/javascript">
       var num = parseInt(prompt("Introducir número"));
-      var salida = 1;
-        for (let i = 1; i <= num; i++) {
+      var raiz = Math.sqrt(num);
+      document.write(Math.trunc(raiz));
 
-            salida = salida * i;
-            document.write(salida + "<br>");
-        }
 </script>
 </body>
 </html>
