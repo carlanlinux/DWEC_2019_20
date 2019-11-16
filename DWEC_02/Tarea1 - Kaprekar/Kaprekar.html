@@ -24,13 +24,12 @@
         var minuendo = desrarrayzar(ordenarDescendente(num));
         var sustraendo = desrarrayzar(ordenarAscendente(num));
         num = minuendo - sustraendo;
-
-
+        var numCierre = num;
         count ++;
         document.write(" " + minuendo + " - " + sustraendo + " = " + num +  "<br>");
-        num = num.toString();
+        num = anadirCeros(num);
 
-    } while (num != KAPERKAR & count <7 )
+    } while (numCierre != KAPERKAR & count <7 )
 
 
     //Funcion para ordenar descendentemente recibiendo un array y devuelve otro array.
@@ -76,6 +75,27 @@ function desrarrayzar(array) {
      return(numero);
 
 }
+    //Añadimos los ceros que sean necesarios para que
+    function anadirCeros(numero) {
+        //Pasamos a string el número
+        var arrayIntermedio = numero.toString();
+
+
+        //Creamos un array vacío, lo rellenamos con el que hemos creado antes y le metemos 0s si es necesario y devolvemos el array.
+        var nuevoArray = [];
+        for (let i = 0; i < arrayIntermedio.length ; i++) {
+            nuevoArray[i] = arrayIntermedio[i];
+        }
+
+        if (numero < 1000 && numero >= 100) nuevoArray.unshift(0);
+        if (numero < 100 && numero >= 10) nuevoArray.unshift(0,0);
+        if (numero < 10 && numero >= 1) nuevoArray.unshift(0,0,0);
+        return nuevoArray;
+    }
+
+
+
+
 </script>
 
 </body>
